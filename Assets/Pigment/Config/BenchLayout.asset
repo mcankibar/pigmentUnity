@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671f6f61ffa0a45178dd2874cfb3aa60, type: 3}
+  m_Name: BenchLayout
+  m_EditorClassIdentifier: Assembly-CSharp::Pigment.PigmentLayout
+  mixer:
+    position: {x: 0, y: 0, z: -1.9}
+    scale: 1.35
+  sources:
+    position: {x: 0, y: 0, z: 0.1}
+    arcWidth: 2.66
+    arcDepth: 2
+    spread: 0
+    startFill: 0.72
+    slotOffsets:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    slotScales:
+    - 1
+    - 1
+    - 1
+    - 1
+  goalShelf:
+    autoPlace: 1
+    position: {x: 0, y: 2.6, z: -3.45}
+    distanceFromWall: 0.75
+    portraitScale: 1.5
+    landscapeScale: 1.1
+    width: 2.2
+    thickness: 0.07
+    tilt: 0
+    color: {r: 0.478, g: 0.306, b: 0.165, a: 1}
+  camera:
+    autoFrame: 1
+    portraitDirection: {x: 0, y: 0.6, z: 1.46}
+    landscapeDirection: {x: 0, y: 1.05, z: 1.46}
+    lookAt: {x: 0, y: 1, z: 0.3}
+    position: {x: 0, y: 6.5, z: 6}
+    fieldOfView: 42
+    portraitMargins: {x: 0.3, y: -0.8, z: 0.94}
+    landscapeMargins: {x: 0.26, y: -0.84, z: 0.8}
+  revision: 5

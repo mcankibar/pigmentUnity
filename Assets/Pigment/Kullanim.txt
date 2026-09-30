@@ -1,0 +1,60 @@
+PIGMENT — liquidGame'in Unity uyarlaması
+
+Proje: /Users/mehmet/Desktop/UnityProjects/pigmentUnity
+Sahne: Assets/Pigment/Scenes/Pigment.unity
+Unity: 6000.6.3f1, Universal Render Pipeline
+
+ÇALIŞTIRMA
+Sahneyi aç, Play'e bas, ardından BAŞLA.
+Bir bardağa dokun veya tıkla; basılı tutarak eğ ve dök.
+Bırakınca bardak dikleşir. Başka bardağa dokunarak renk değiştir.
+Hedef doluluk çizgisine ulaşılınca havadaki sıvı beklenir ve puan hesaplanır.
+85/90/95 puan: bir/iki/üç yıldız. Başarısız bölüm yeniden denenir.
+
+DÜZENLENEBİLİR DOSYALAR — Assets/Pigment/Config/
+BenchLayout.asset
+  mixer: beherin position ve scale değerleri.
+  sources: bardak grubu konumu, yay genişliği/derinliği/açısı.
+  slotOffsets ve slotScales: bardak yerleşim yuvalarının ayrı konum/ölçekleri.
+  goalShelf: hedef bardak rafı; autoPlace kapatılınca manuel konum.
+  camera: portre/yatay otomatik kadraj veya manuel kamera.
+  Z işareti kaynak oyundaki ayarla aynıdır; Unity dönüşümü scriptte yapılır.
+  Play sırasında değişiklik mevcut bölümü yeniden kurar ve karışımı sıfırlar.
+  Edit modunda: Pigment > Apply Layout to Scene Preview, ardından Save.
+
+PourAndScoring.asset
+  Doluluk, kaynak miktarı, eğim/hız/yay/sönümleme, akış, yerçekimi ve yıldız eşikleri.
+VisualsAndAudio.asset
+  Cam/sıvı materyalleri, aydınlatma, efektler, öğretici el ve ses seviyeleri.
+Levels/
+  Yedi bölüm: hedef reçete ve sunulan pigment sırası.
+  Recipe XYZW = kırmızı, sarı, mavi, beyaz oranları.
+Vessels/
+  Altı bardak/beher tanımı, ölçüler ve prefab bağlantıları.
+  Şekil ölçüleri değiştirilirse cam mesh/prefab da yeniden üretilmelidir;
+  normal yerleşim/ölçek değişiklikleri için BenchLayout kullan.
+
+YAPI EŞLEŞMESİ
+mix.js -> PigmentMath: RYB karışımı, beyazla açma, OKLab puanlama.
+vessels.js -> VesselDefinition, Cavity, VesselMesh, LiquidSurface.
+bench.js -> PigmentGame, VesselView, PourStream.
+levels.js/session.js -> bölüm ScriptableObject'leri ve oyun durumları.
+hud.js/css -> Canvas, TextMeshPro, native vektör UI simgeleri.
+workshop.js -> prosedürel atölye dokuları, masa, duvar, kitaplar ve efektler.
+audio.js -> Unity AudioSource üzerinde sentezlenen müzik/dökme/cam sesleri.
+
+DOĞRULAMA
+Kaynak JavaScript testleri: 13 geçti.
+Kaynak oyundan 50 renk/puan + 36 hacim/eğim örneği Unity ile eşleşti.
+Yedi bölüm gerçek dökme simülasyonuyla tamamlandı: %96–100, sıvı kaybı yok.
+Input System ile Başla, bardak seçimi, basılı tutma/bırakma doğrulandı.
+Yanlış karışım: %61, sıfır yıldız, Tekrar dene.
+Portre/yatay kadraj ve canlı ScriptableObject konum/ölçek kontrol edildi.
+Derleme hatası yok. Mobil cihaz üzerinde fiziksel dokunma ve mağaza build'i
+bu teslimin test kapsamına dahil değildir.
+
+Görsel ve ses katmanı Unity'nin yerel karşılıklarıyla yeniden üretildi;
+Three.js cam kırılması/transmission ve Web Audio filtreleri piksel/ses dalgası
+bazında aynı değildir. Mekanik ve puanlama kaynak oyuna göre taşındı.
+Web playable-ad reklam/network dışa aktarma araçları bu Unity oyununa dahil değil.
+Kaynak liquidGame dosyaları değiştirilmedi. Mevcut SampleScene korundu.

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 010b001110d004dfc9a81706949286a7, type: 3}
+  m_Name: PourAndScoring
+  m_EditorClassIdentifier: Assembly-CSharp::Pigment.PigmentRules
+  fillLevel: 0.6
+  supply: 0.66
+  passPercent: 85
+  twoStars: 90
+  threeStars: 95
+  hoverTilt: 16
+  maxTilt: 122
+  tiltSpeed: 75
+  pourTiltSpeed: 24
+  travelTime: 0.42
+  flowGain: 3.2
+  maxFlow: 0.5
+  tiltSpring: 150
+  tiltDamping: 21
+  gravity: 22
+  streamThickness: 1
+  settleTime: 0.45

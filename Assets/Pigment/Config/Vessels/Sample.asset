@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d244dba65395c4ed1bc30455f82fe55a, type: 3}
+  m_Name: Sample
+  m_EditorClassIdentifier: Assembly-CSharp::Pigment.VesselDefinition
+  height: 0.92
+  rBottom: 0.29
+  rTop: 0.34
+  wall: 0.02
+  baseThickness: 0.12
+  bulge: 0.03
+  curve: 1.2
+  glassMesh: {fileID: 4300000, guid: a2474743a4c4345819fce2e9d8afa755, type: 2}
+  prefab: {fileID: 8418685998332245181, guid: 935c07f6049d9419985134be2af25cde, type: 3}
