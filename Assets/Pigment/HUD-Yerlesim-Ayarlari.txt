@@ -1,0 +1,32 @@
+HUD KONUM VE ÖLÇEK AYARLARI
+
+Unity Project penceresi:
+Assets/Pigment/Config/HudLayout.asset
+
+Elements listesindeki her öğe için ayrı Portrait ve Landscape ayarları bulunur:
+Position: ilgili ekran yönündeki konum/offset (Canvas birimleri).
+Scale: X/Y/Z ölçek. Orantılı boyut için X ve Y değerlerini aynı tut.
+Size: RectTransform genişlik/yükseklik.
+Anchor Min / Max ve Pivot: ekranın/üst öğenin hangi kenarına bağlı olduğu.
+
+Üst panel: Target Card.
+Hedef etiket: Target Tag.
+Öğretici metin: Hint.
+Öğretici el: Hand; tüm el grubunu taşımak için Tutorial.
+Sonuç kutusu: Result Card.
+Başlangıç ve tamamlanma ekranlarının yazıları/düğmeleri de listede bulunur.
+Name aynı olan öğeleri ayırmak için Path alanına bak.
+Path Canvas hiyerarşisindeki adresidir; nesne yeniden adlandırılmadıkça değiştirme.
+
+Target Tag, Hint ve Tutorial için Follow World:
+Açık: ilgili bardağı takip eder; Position takip konumuna eklenen farktır.
+Kapalı: Anchor ve Position ile belirlenen sabit ekran konumunu kullanır.
+Diğer öğelerde Follow World kullanılmaz.
+
+Portrait Resolution / Landscape Resolution ve Match:
+Her ekran yönünün ayrı CanvasScaler referans boyutu ve ölçekleme tercihi.
+Ekran yönü otomatik seçilir. Kare ekran Landscape ayarlarını kullanır.
+
+Play sırasında varlıktaki ayarlar değiştirilince HUD anında güncellenir.
+Hiyerarşide RectTransform değiştirmek yerine kalıcı değişiklikleri bu varlığa yaz.
+Bir üst öğenin Scale değerinin alt öğelere de uygulanacağını unutma.

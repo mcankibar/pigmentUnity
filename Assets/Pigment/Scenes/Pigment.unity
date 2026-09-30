@@ -10365,7 +10365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pigment.PigmentHud
   game: {fileID: 1989359349}
-  hudLayout: {fileID: 0}
+  hudLayout: {fileID: 11400000, guid: 4e358839d75bd4f9d933346b5fe9be80, type: 2}
   resultStarIcons:
   - {fileID: 570420236}
   - {fileID: 1127918717}
