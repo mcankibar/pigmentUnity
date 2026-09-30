@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9f0d47bc1378413c8f9ffa968cb845a, type: 3}
-  m_Name: hud-layout
+  m_Name: HudLayout
   m_EditorClassIdentifier: Assembly-CSharp::Pigment.PigmentHudLayout
   portraitResolution: {x: 450, y: 800}
   landscapeResolution: {x: 800, y: 450}
   portraitMatch: 0.5
   landscapeMatch: 0.5
   elements:
-  - name: Target Card
-    path: Safe Area/Target Card
+  - name: Target Card Group
+    path: Safe Area/Target Card Group
     portrait:
       anchorMin: {x: 0.5, y: 1}
       anchorMax: {x: 0.5, y: 1}
       pivot: {x: 0.5, y: 1}
       position: {x: 0, y: -14}
       size: {x: 420, y: 88}
-      scale: {x: 0.85, y: 0.85, z: 1}
+      scale: {x: 1, y: 1, z: 1}
       followWorld: 0
     landscape:
       anchorMin: {x: 0, y: 1}
@@ -36,7 +36,7 @@ MonoBehaviour:
       scale: {x: 0.65, y: 0.65, z: 0.65}
       followWorld: 0
   - name: Level
-    path: Safe Area/Target Card/Level
+    path: Safe Area/Target Card Group/Target Card/Level
     portrait:
       anchorMin: {x: 0.5, y: 0.5}
       anchorMax: {x: 0.5, y: 0.5}
@@ -54,7 +54,7 @@ MonoBehaviour:
       scale: {x: 1, y: 1, z: 1}
       followWorld: 0
   - name: Target
-    path: Safe Area/Target Card/Target
+    path: Safe Area/Target Card Group/Target Card/Target
     portrait:
       anchorMin: {x: 0.5, y: 0.5}
       anchorMax: {x: 0.5, y: 0.5}
@@ -72,7 +72,7 @@ MonoBehaviour:
       scale: {x: 1, y: 1, z: 1}
       followWorld: 0
   - name: Fill Track
-    path: Safe Area/Target Card/Fill Track
+    path: Safe Area/Target Card Group/Target Card/Fill Track
     portrait:
       anchorMin: {x: 0.5, y: 0.5}
       anchorMax: {x: 0.5, y: 0.5}
@@ -90,7 +90,7 @@ MonoBehaviour:
       scale: {x: 1, y: 1, z: 1}
       followWorld: 0
   - name: Fill
-    path: Safe Area/Target Card/Fill Track/Fill
+    path: Safe Area/Target Card Group/Target Card/Fill Track/Fill
     portrait:
       anchorMin: {x: 0.5, y: 0.5}
       anchorMax: {x: 0.5, y: 0.5}
@@ -108,7 +108,7 @@ MonoBehaviour:
       scale: {x: 1, y: 1, z: 1}
       followWorld: 0
   - name: Match
-    path: Safe Area/Target Card/Match
+    path: Safe Area/Target Card Group/Target Card/Match
     portrait:
       anchorMin: {x: 0.5, y: 0.5}
       anchorMax: {x: 0.5, y: 0.5}
@@ -126,7 +126,7 @@ MonoBehaviour:
       scale: {x: 1, y: 1, z: 1}
       followWorld: 0
   - name: Retry
-    path: Safe Area/Target Card/Retry
+    path: Safe Area/Target Card Group/Target Card/Retry
     portrait:
       anchorMin: {x: 0.5, y: 0.5}
       anchorMax: {x: 0.5, y: 0.5}
@@ -144,7 +144,7 @@ MonoBehaviour:
       scale: {x: 1, y: 1, z: 1}
       followWorld: 0
   - name: Label
-    path: Safe Area/Target Card/Retry/Label
+    path: Safe Area/Target Card Group/Target Card/Retry/Label
     portrait:
       anchorMin: {x: 0.5, y: 0.5}
       anchorMax: {x: 0.5, y: 0.5}
@@ -162,7 +162,7 @@ MonoBehaviour:
       scale: {x: 1, y: 1, z: 1}
       followWorld: 0
   - name: Refresh Icon
-    path: Safe Area/Target Card/Retry/Refresh Icon
+    path: Safe Area/Target Card Group/Target Card/Retry/Refresh Icon
     portrait:
       anchorMin: {x: 0.5, y: 0.5}
       anchorMax: {x: 0.5, y: 0.5}
@@ -653,9 +653,9 @@ MonoBehaviour:
       anchorMin: {x: 0.5, y: 0.5}
       anchorMax: {x: 0.5, y: 0.5}
       pivot: {x: 0.5, y: 2.75}
-      position: {x: 0, y: -20}
+      position: {x: 0, y: 70}
       size: {x: 430, y: 42}
-      scale: {x: 1, y: 1, z: 1}
+      scale: {x: 1.1, y: 2, z: 1}
       followWorld: 1
     landscape:
       anchorMin: {x: 0, y: 0}
